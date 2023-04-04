@@ -4,8 +4,17 @@ import { ref } from 'vue'
 const nome = ref('')
 const senha = ref('')
 const email = ref('')
+const confirmaSenha = ref('')
 
 const enviar = ref(false)
+function confirma(){
+  if(senha.value != confirmaSenha.value){
+    alert("senha incorreta")
+  }
+  else{
+    enviar.value = !enviar.value
+  }
+}
 </script>
 
 <template>
@@ -15,10 +24,12 @@ const enviar = ref(false)
     <input type = "text" v-model="nome" />
     <label>Senha</label>
     <input type="password" v-model="senha" />
+    <label>Confirma senha:</label>
+    <input type="password" v-model="confirmaSenha">
     <label>Email: </label>
     <input type="email" v-model="email" />
   </div>
-  <button @click="enviar = !enviar">Enviar</button>
+  <button @click="confirma">enviar</button>
   <div class="Info" v-if="enviar">
     <p>Suas Informações:</p>
     <p>Nome: {{ nome }}</p>

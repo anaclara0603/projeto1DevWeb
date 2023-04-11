@@ -84,7 +84,7 @@ function confirma() {
       <button type="button" class="btn btn-danger" @click="confirma">enviar</button>
     </div>
 
-    <div class="info" v-if="enviar">
+    <div class="info" >
       <h1>Suas Informações</h1>
       <p class="text-danger">Nome: </p>
       <p>{{ nome }}</p>
@@ -101,14 +101,17 @@ function confirma() {
       <p class="text-danger">Linguagem de Programação: </p>
       {{ linguagemProg }}
       <p class="text-danger">Biografia: </p>
-      <p>{{ bio }}</p>
+      <p class="text-bio">{{ bio }}</p>
     </div>
   </div>
 </template>
 
 <style scoped>
 
-
+.text-bio {
+  word-wrap: break-word;
+  line-break: anywhere;
+}
 .container {
   display: flex;
   justify-content: space-around;

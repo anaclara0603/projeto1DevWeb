@@ -84,7 +84,7 @@ function confirma() {
       <button type="button" class="btn btn-danger" @click="confirma">enviar</button>
     </div>
 
-    <div class="info" >
+    <div class="info" v-if="enviar">
       <h1>Suas Informações</h1>
       <p class="text-danger">Nome: </p>
       <p>{{ nome }}</p>

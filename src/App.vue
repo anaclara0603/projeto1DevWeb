@@ -48,7 +48,7 @@ function confirma() {
       <p class="a">{{ bio }}</p>
     </div>
 
-    <div v-else>aa
+    <div v-else>
       <form @submit.prevent="enviar = confirma()">
 
         <div class="login">

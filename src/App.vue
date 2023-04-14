@@ -10,7 +10,7 @@ const endereco = ref('')
 const cidade = ref('')
 const estado = ref('')
 const hobbie = ref('')
-const linguagemProg = ref([])
+const linguagemProg = ref('')
 const bio = ref('')
 
 
@@ -74,11 +74,7 @@ function confirma() {
       <label>Hobbie: </label>
       <input type="text" v-model="hobbie" placeholder="Hobbie" maxlength="20"/>
       <label>Linguagem que você programa: </label>
-      
-        Java <input type="checkbox" v-model="linguagemProg" value="Java"/>
-        Python <input type="checkbox" v-model="linguagemProg" value="Python">
-        JavaScript <input type="checkbox" v-model="linguagemProg" value="JavaScript">
-      
+      <input type="text" v-model="linguagemProg" placeholder="Linguagem de Programação" maxlength="20" />
       <label>Biografia: </label>
       <input type="text" v-model="bio" placeholder="Biografia" maxlength="500"/>
       <label>Senha: </label>
@@ -103,7 +99,7 @@ function confirma() {
       <p class="text-danger">Hobbie: </p>
       <p>{{ hobbie }}</p>
       <p class="text-danger">Linguagem de Programação: </p>
-      {{ linguagemProg.join(", ") }}
+      {{ linguagemProg }}
       <p class="text-danger">Biografia: </p>
       <p class="text-bio">{{ bio }}</p>
     </div>
